@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav
       className="navbar border-bottom border-body"
-      style={{ backgroundColor: "#e3f2fd" }}
+      style={{ backgroundColor: "#e3f2fd", marginTop:'50px' }}
     >
       <div className="container-fluid">
         <div className="d-flex">
