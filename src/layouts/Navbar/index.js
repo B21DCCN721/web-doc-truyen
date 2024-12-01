@@ -20,12 +20,12 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item me-3">
-              <NavLink className="nav-link fw-semibold" to="#">
+              <NavLink className="nav-link fw-semibold" to="/lichsu">
                 LỊCH SỬ
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link fw-semibold" to="#">
+              <NavLink className="nav-link fw-semibold" to="/theodoi">
                 THEO DÕI
               </NavLink>
             </li>

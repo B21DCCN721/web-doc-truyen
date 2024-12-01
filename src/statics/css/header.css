@@ -1,9 +1,8 @@
 .header-img{
     cursor: pointer;
 }
-a {
+.link {
     text-decoration: none;
-    color: inherit; 
-    outline: none; 
-  }
-  
+    color: inherit;
+    outline: none;
+}

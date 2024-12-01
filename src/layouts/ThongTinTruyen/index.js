@@ -6,8 +6,12 @@ import Navbar from "../Navbar";
 import "../../statics/css/thongtintruyen.css";
 
 import biatruyen from "../../statics/images/biatruyen.jpg";
+import { useParams } from "react-router-dom";
 
 const ThongTinTruyen = () => {
+  const {id} = useParams()
+  console.log(id);
+  
   return (
     <div className="container-fluid p-0">
       <Header />
@@ -70,7 +74,7 @@ const ThongTinTruyen = () => {
           </h4>
           <p>Nội dung truyện bla bla ...</p>
         </div>
-        <div className="danhsachchap w-100 mb-4">
+        <div className="danhsachchap w-100 mb-3">
           <h4 className="border-bottom border-info">
             <i className="fa-solid fa-list me-2"></i>
             DANH SÁCH CHƯƠNG
@@ -100,6 +104,12 @@ const ThongTinTruyen = () => {
               </tr>
             </tbody>
           </table>
+        </div>
+        <div className="binhluan w-100">
+          <h4 className="border-bottom border-info mb-4">
+            <i className="fa-regular fa-comment"></i>
+            BÌNH LUẬN
+          </h4>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import yae from '../../statics/images/yae1.png'
 const Header = () => {
     return(
         <header className="w-100 d-flex align-items-center justify-content-between border-bottom fixed-top" style={{backgroundColor: '#edceeb', height: '50px'}}>
-           <Link to = '/'>
+           <Link to = '/' className="link">
             <div className="header-img d-flex align-items-center justify-content-around ms-3"> 
                     <img src={yae} className="object-fit-cover rounded-circle me-3" alt="..." style={{width: '40px', height:'40px'}}/>
                     <h4>Thiên Tàng Truyện</h4>

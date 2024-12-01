@@ -1,0 +1,15 @@
+.btn-outline-primary:hover {
+    background-color: #94baf2; /* Màu nền khi hover */
+    color: white; /* Màu chữ */
+  }
+  
+  /* Ưu tiên cho nút active */
+  .btn-outline-primary.active:hover {
+    background-color: #0d6efd; /* Màu nền giữ nguyên */
+    color: white; /* Màu chữ giữ nguyên */
+  }
+.xephang img {
+    width: 56px;
+    height: 46px;
+}
+  

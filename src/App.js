@@ -5,6 +5,8 @@ import DangNhap from "./layouts/DangNhap";
 import DangKy from "./layouts/DangKy";
 import Home from "./layouts/Home";
 import ThongTinTruyen from "./layouts/ThongTinTruyen";
+import LichSu from "./layouts/LichSu";
+import TheoDoi from "./layouts/TheoDoi";
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
         <Route path="/" element = {<Home/>} />
         <Route path="/dangnhap" element = {<DangNhap/>} />
         <Route path="/dangky" element = {<DangKy/>} />
-        <Route path="/thongtintruyen" element = {<ThongTinTruyen/>} />
+        <Route path="/thongtintruyen/:id" element = {<ThongTinTruyen/>} />
+        <Route path="/lichsu" element = {<LichSu/>} />
+        <Route path="/theodoi" element = {<TheoDoi/>} />
     </Routes>
   );
 }
