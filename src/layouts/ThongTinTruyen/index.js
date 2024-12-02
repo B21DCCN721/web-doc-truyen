@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../Header";
 import Navbar from "../Navbar";
+import Comment from "./components/Comment";
 
 import "../../statics/css/thongtintruyen.css";
 
@@ -110,6 +111,7 @@ const ThongTinTruyen = () => {
             <i className="fa-regular fa-comment"></i>
             BÌNH LUẬN
           </h4>
+          <Comment />
         </div>
       </div>
     </div>
