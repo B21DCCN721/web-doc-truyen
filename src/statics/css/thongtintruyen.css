@@ -12,3 +12,8 @@
 .danhsachchap table td:first-child:hover{
     color: blue;
 }
+.link {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}

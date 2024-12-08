@@ -7,6 +7,7 @@ import Home from "./layouts/Home";
 import ThongTinTruyen from "./layouts/ThongTinTruyen";
 import LichSu from "./layouts/LichSu";
 import TheoDoi from "./layouts/TheoDoi";
+import Chapter from "./layouts/Chapter";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/dangnhap" element = {<DangNhap/>} />
         <Route path="/dangky" element = {<DangKy/>} />
         <Route path="/thongtintruyen/:id" element = {<ThongTinTruyen/>} />
+        <Route path="/thongtintruyen/:id/:chapter" element = {<Chapter/>} />
         <Route path="/lichsu" element = {<LichSu/>} />
         <Route path="/theodoi" element = {<TheoDoi/>} />
     </Routes>

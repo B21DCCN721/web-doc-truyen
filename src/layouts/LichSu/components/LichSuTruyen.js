@@ -6,12 +6,20 @@ import { Stack, Pagination } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import danhsachtruyen from "../datas/danhsachtruyen";
+import XacNhanHuy from "./XacNhanHuy";
 
 const LichSuTruyen = () => {
   const [page, setPage] = useState(1);
+  const [isDialog, setIsDialog] = useState(false);
   const handlePageChange = (event, value) => {
     setPage(value);
   };
+  const hienDialog = () => {
+    setIsDialog(true);
+  }
+  const dongDialog = (check) => {
+    setIsDialog(check);
+  }
   return (
     <div className="lichsu container border-start border-end border-bottom bg-body-tertiary mt-5 rounded-bottom">
       <h3 className="mb-3">
@@ -23,9 +31,8 @@ const LichSuTruyen = () => {
           {danhsachtruyen.map((item, index) => (
             <figure className="figure m-0 col-2" key={index}>
               <div
-                className="card-container m-auto"
+                className="card-container m-auto position-relative"
                 style={{
-                  position: "relative",
                   width: "190px",
                   height: "220px",
                 }}
@@ -38,14 +45,12 @@ const LichSuTruyen = () => {
                   />
                 </Link>
                 <div
-                  className="card-title-overlay w-100"
+                  className="card-title-overlay w-100 position-absolute bottom-0 text-white text-center"
                   style={{
-                    position: "absolute",
-                    bottom: "0",
                     backgroundColor: "rgba(0, 0, 0, 0.5)", // Nền mờ
-                    color: "white",
-                    textAlign: "center",
+                    cursor:'pointer',
                   }}
+                  onClick={hienDialog}
                 >
                   <i className="fa-solid fa-trash-can"></i>
                   <span className="ms-2">Xóa</span>
@@ -72,6 +77,7 @@ const LichSuTruyen = () => {
           ))}
         </div>
       </div>
+      {isDialog && <XacNhanHuy bamXacNhan_Huy={dongDialog} />}
       <div className="d-flex justify-content-center align-items-center w-100 mt-4">
         <Stack spacing={2}>
           <Pagination count={10} page={page} onChange={handlePageChange} />

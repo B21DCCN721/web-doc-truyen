@@ -7,11 +7,13 @@ import Comment from "./components/Comment";
 import "../../statics/css/thongtintruyen.css";
 
 import biatruyen from "../../statics/images/biatruyen.jpg";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ThongTinTruyen = () => {
   const {id} = useParams()
   console.log(id);
+
+  const navigate = useNavigate();
   
   return (
     <div className="container-fluid p-0">
@@ -55,8 +57,8 @@ const ThongTinTruyen = () => {
             </ul>
           </div>
         </div>
-        <div className="d-flex align-items-center mb-5">
-          <button type="button" className="btn btn-primary me-4">
+        <div className="theodoi d-flex align-items-center mb-5">
+          <button type="button" className="btn btn-primary me-4" onClick={() => (navigate(`/thongtintruyen/${id}/chapter 01`))}>
             Đọc từ đầu
           </button>
           <button type="button" className="btn btn-primary me-4">
@@ -91,7 +93,7 @@ const ThongTinTruyen = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr onClick={() => navigate(`/thongtintruyen/${id}/chapter 1`)}>
                 <td>1</td>
                 <td>Mark</td>
               </tr>

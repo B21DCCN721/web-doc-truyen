@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import anh1 from "../../../statics/images/anh1.jpg";
 import { Link } from "react-router-dom";
@@ -22,9 +22,14 @@ const TopTruyen = () => {
       </h3>
       <div className="toptruyen-items w-100 mb-3">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           navigation
+          loop
           // pagination={{ clickable: true }}
+          autoplay={{
+            delay: 2000, // Thời gian chờ (ms) giữa mỗi lần chuyển slide
+            disableOnInteraction: true, // dừng autoplay khi người dùng tương tác
+          }}
           spaceBetween={10}
           slidesPerView={5}
           breakpoints={{
@@ -35,14 +40,13 @@ const TopTruyen = () => {
         >
           {toptruyen.map((item) => (
             <SwiperSlide key={item.id}>
-                <div
-                  className="card-container col-2 m-auto "
-                  style={{
-                    position: "relative",
-                    width: "190px",
-                    height: "220px",
-                  }}
-                >
+              <div
+                className="card-container col-2 m-auto position-relative"
+                style={{
+                  width: "190px",
+                  height: "220px",
+                }}
+              >
                 <Link to={`/thongtintruyen/${item.id}`}>
                   <img
                     src={anh1}
@@ -52,13 +56,9 @@ const TopTruyen = () => {
                 </Link>
                 <Link to={`/thongtintruyen/${item.id}`}>
                   <div
-                    className="card-title-overlay w-100"
+                    className="card-title-overlay w-100 position-absolute bottom-0 text-white text-center"
                     style={{
-                      position: "absolute",
-                      bottom: "0",
                       backgroundColor: "rgba(0, 0, 0, 0.5)", // Nền mờ
-                      color: "white",
-                      textAlign: "center",
                     }}
                   >
                     <h6
@@ -78,7 +78,7 @@ const TopTruyen = () => {
                     </div>
                   </div>
                 </Link>
-                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

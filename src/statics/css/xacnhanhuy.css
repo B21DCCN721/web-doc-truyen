@@ -1,0 +1,10 @@
+
+.lopphu {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Hiển thị trên các thành phần khác */
+  }
+  
+.dialog-huy {
+    z-index: 1000; /* Hiển thị trên lớp phủ */
+  }
+  
